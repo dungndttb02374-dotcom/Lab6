@@ -1,0 +1,89 @@
+﻿@model sof1022_nhom1.Models.Users
+
+@{
+    ViewData["Title"] = "Đăng ký";
+}
+
+<style>
+
+    body{
+        background:#020817;
+        color:white;
+        font-family:Arial;
+    }
+
+    .register-box{
+        width:400px;
+        margin:100px auto;
+        background:#04152c;
+        padding:40px;
+        border-radius:20px;
+        border:1px solid #0b2a4b;
+    }
+
+    .title{
+        text-align:center;
+        font-size:35px;
+        margin-bottom:30px;
+        color:#3da5ff;
+    }
+
+    .input-box{
+        margin-bottom:20px;
+    }
+
+    .input-box input{
+        width:100%;
+        padding:15px;
+        border:none;
+        border-radius:10px;
+        background:#071c36;
+        color:white;
+        outline:none;
+        font-size:16px;
+    }
+
+    .btn{
+        width:100%;
+        padding:15px;
+        border:none;
+        border-radius:10px;
+        background:#007bff;
+        color:white;
+        font-size:18px;
+        cursor:pointer;
+    }
+
+</style>
+
+<div class="register-box">
+
+    <div class="title">
+        Đăng ký
+    </div>
+
+    <form method="post">
+
+        <div class="input-box">
+            <input asp-for="UserName"
+                   placeholder="Họ và tên">
+        </div>
+
+        <div class="input-box">
+            <input asp-for="Email"
+                   placeholder="Email">
+        </div>
+
+        <div class="input-box">
+            <input asp-for="Password"
+                   type="password"
+                   placeholder="Mật khẩu">
+        </div>
+
+        <button class="btn" type="submit">
+            Đăng ký
+        </button>
+
+    </form>
+
+</div>

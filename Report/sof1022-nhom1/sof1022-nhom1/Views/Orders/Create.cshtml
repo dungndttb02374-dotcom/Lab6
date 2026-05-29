@@ -1,0 +1,55 @@
+﻿@model sof1022_nhom1.Models.Product
+
+<style>
+
+    body {
+        background: #020817;
+        color: white;
+        font-family: Arial;
+    }
+
+    .box {
+        width: 500px;
+        margin: 50px auto;
+        background: #04152c;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    img {
+        width: 250px;
+        border-radius: 20px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 15px 30px;
+        background: #007bff;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+    }
+
+</style>
+
+<div class="box">
+
+    <img src="@Model.ImageUrl">
+
+    <h2>@Model.ProductName</h2>
+
+    <h3>
+        @Model.Price.ToString("N0") đ
+    </h3>
+
+    <form method="post">
+
+        <button type="submit">
+            Xác nhận đặt hàng
+        </button>
+
+    </form>
+
+</div>
